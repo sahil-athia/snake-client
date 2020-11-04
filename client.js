@@ -8,7 +8,7 @@ const connect = function() {
   conn.on('connect', () => {
     conn.write('Name: YYZ')
   })
-
+  
   conn.on('data', () => {
     console.log('you died cause you idled');
   });
@@ -22,3 +22,14 @@ const connect = function() {
 module.exports = {
   connect,
 }
+
+
+// conn.on('connect', () => {
+//   conn.write('Move: up')
+//   setTimeout(() => {
+//     conn.write('Move: up')
+//   }, 1000)
+// })
+// setInterval(() => {
+//   conn.write('Move: up')
+// }, 1000)
